@@ -13,10 +13,11 @@ gem "cgi"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-end
+  end
 
-group :development do
-  gem "tabulo"
-  gem "web-console"
-end
+  group :development do
+    gem "tabulo"
+      gem "web-console"
+      end
 
+      
