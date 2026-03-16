@@ -8,6 +8,11 @@
       <div class="card p-3">
         <h4><%= entry["title"] %></h4>
         <p><small><%= entry["occurred_on"] %></small></p>
+
+        <% if entry.uploaded_image.attached? %>
+          <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+        <% end %>
+
         <p><%= entry["description"] %></p>
       </div>
     </div>
