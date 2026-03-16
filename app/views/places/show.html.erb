@@ -1,11 +1,18 @@
 <h1><%= @place["name"] %></h1>
 
 <h2>My Entries</h2>
-<% for entry in @entries %>
-  <h3><%= entry["title"] %></h3>
-  <h4><%= entry["occurred_on"] %></h4>
-  <p><%= entry["description"] %></p>
-<% end %>
+
+<div class="row">
+  <% for entry in @entries %>
+    <div class="col-md-4 mb-4">
+      <div class="card p-3">
+        <h4><%= entry["title"] %></h4>
+        <p><small><%= entry["occurred_on"] %></small></p>
+        <p><%= entry["description"] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <% if @current_user != nil %>
   <p>
